@@ -5,6 +5,3 @@ venv/
 
 # Dictionaries
 dicts/
-
-# result jsons
-result*.json

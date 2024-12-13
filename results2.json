@@ -1,0 +1,41 @@
+{
+    "Corrected": "Ez egy helytelen mondat.\nAz asztal négy lábú",
+    "Incorrect words": [
+        "eyg",
+        "hejtelen",
+        "azstal",
+        "négyy",
+        "labu"
+    ],
+    "Suggestions": [
+        [
+            "egy"
+        ],
+        [
+            "helytelen",
+            "heteljen",
+            "tejtelen",
+            "lejtelen",
+            "nejtelen",
+            "hegtelen",
+            "pejtelen",
+            "vejtelen",
+            "bejtelen",
+            "fejtelen"
+        ],
+        [
+            "asztal"
+        ],
+        [
+            "négy",
+            "négye",
+            "négyé",
+            "négy y"
+        ],
+        [
+            "lábú",
+            "tabu",
+            "lapu"
+        ]
+    ]
+}
