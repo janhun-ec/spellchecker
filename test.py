@@ -1,4 +1,4 @@
-from spellcheker import SpellChecker
+from spellchecker import SpellChecker
 
 lang = 'hu'
 text = 'Hejtelen mondat'
