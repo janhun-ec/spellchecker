@@ -1,5 +1,6 @@
 from json import dump
 from hunspell import HunSpell
+from language_tool_python import LanguageTool
 from spacy import load
 
 
@@ -14,15 +15,29 @@ class SpellChecker:
         self.spellchecker = self.__get_obj(lang)
 
 
+    def __get_tool(self, lang):
+        if lang in ['en', 'fr', 'pl', 'de', 'pt','es']:
+            return 'languagetool'
+        elif lang in ['zh']:
+            # TODO get chinese spellchecker
+            return 'hunspell'
+        else:
+            return 'hunspell'
+
+
     def __get_obj(self, lang):
         """Returns Hunspell spellchecker for the specific language"""
         if lang in self.not_supported_langs:
             lang = 'en'
-        try:
-            return HunSpell(f'{self.dicts_path}/{lang}.dic', f'{self.dicts_path}/{lang}.aff')
-        except:
-            print('Dictionaries missing, run ./get_dicts.sh to download them.')
-            quit()
+        self.tool = self.__get_tool(lang)
+        if self.tool == 'hunspell':
+            try:
+                return HunSpell(f'{self.dicts_path}/{lang}.dic', f'{self.dicts_path}/{lang}.aff')
+            except:
+                print('Dictionaries missing, run ./get_dicts.sh to download them.')
+                quit()
+        elif self.tool == 'languagetool':
+            return LanguageTool(lang)
 
 
     def __tokenize(self, string):
@@ -58,12 +73,7 @@ class SpellChecker:
         return corrected, incorrect_words, suggestions
 
 
-    def analyze(self, text, filemode=False, write_to_file=False, outputfile='results.json'):
-        """Parses the text, splits by spaces, builds the corrected sentence"""
-        if filemode:
-            with open(text, 'r', encoding="utf-8") as f:
-                text = f.read()
-
+    def __hunspell_corrector(self, text):
         corrected = ''
         incorrect_words = []
         suggestions = []
@@ -75,6 +85,25 @@ class SpellChecker:
             suggestions.extend(curr_suggestions)
 
         corrected = corrected[:-1]
+        
+        return corrected, incorrect_words, suggestions
+
+
+    def __languagetool_corrector(self, text):
+        # TODO
+        return self.__hunspell_corrector(text)
+
+
+    def analyze(self, text, filemode=False, write_to_file=False, outputfile='results.json'):
+        """Parses the text, splits by spaces, builds the corrected sentence"""
+        if filemode:
+            with open(text, 'r', encoding="utf-8") as f:
+                text = f.read()
+
+        if self.tool == 'hunspell':
+            corrected, incorrect_words, suggestions = self.__hunspell_corrector(text)
+        elif self.tool == 'languagetool':
+            corrected, incorrect_words, suggestions = self.__languagetool_corrector(text)
 
         result = {
             'Corrected': corrected,
