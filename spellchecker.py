@@ -32,16 +32,18 @@ class SpellChecker:
         return tokenized
 
 
-    def __correct_chunk(self, chunk):
+    def __correct_chunk(self, chunk, position):
         """
         Text is separated by spaces into chunks.
         Actual spellchecking and correction.
         """
         tokenized = self.__tokenize(chunk)
-        # doc = self.nlp(chunk)
         incorrect_words = []
         suggestions = []
         corrected = ''
+        positions = []
+
+        curr_position = 0
         for token in tokenized:
             if not token.isalpha():     # if not word
                 corrected += token
@@ -55,7 +57,11 @@ class SpellChecker:
 
                 corrected += curr_suggestions[0] if curr_suggestions else token
 
-        return corrected, incorrect_words, suggestions
+                positions.append(position + curr_position)
+            
+            curr_position += len(token)
+
+        return corrected, incorrect_words, suggestions, positions
 
 
     def analyze(self, text, filemode=False, write_to_file=False, outputfile='results.json'):
@@ -67,19 +73,41 @@ class SpellChecker:
         corrected = ''
         incorrect_words = []
         suggestions = []
+        positions = []
 
+        position = 0
         for token in text.split(' '):
-            curr_corrected, curr_incorrect_words, curr_suggestions = self.__correct_chunk(token)
+            curr_corrected, curr_incorrect_words, curr_suggestions, curr_positions = self.__correct_chunk(token)
             corrected += curr_corrected + ' '
             incorrect_words.extend(curr_incorrect_words)
             suggestions.extend(curr_suggestions)
+            positions.extend(curr_positions)
+            position += len(token) + 1
 
         corrected = corrected[:-1]
 
+
+        # build up the errors
+        error_type = 'Misspelling'
+        tool = 'HunSpell'
+        errors = []
+
+        for i, incorrect_word in enumerate(incorrect_words):
+            curr_suggestions = suggestions[i]
+            position = positions[i]
+
+            error = {
+                'Word': incorrect_word,
+                'StartPosition': position,
+                'ErrorType': error_type,
+                'Suggestions': curr_suggestions,
+                'SpellCheckerTool': tool,
+            }
+            errors.append(error)
+        
         result = {
-            'Corrected': corrected,
-            'Incorrect words': incorrect_words,
-            'Suggestions': suggestions,
+            'OriginalText': text,
+            'Errors': errors,
             }
 
         if write_to_file:

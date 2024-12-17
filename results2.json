@@ -1,41 +1,64 @@
 {
-    "Corrected": "Ez egy helytelen mondat.\nAz asztal négy lábú",
-    "Incorrect words": [
-        "eyg",
-        "hejtelen",
-        "azstal",
-        "négyy",
-        "labu"
-    ],
-    "Suggestions": [
-        [
-            "egy"
-        ],
-        [
-            "helytelen",
-            "heteljen",
-            "tejtelen",
-            "lejtelen",
-            "nejtelen",
-            "hegtelen",
-            "pejtelen",
-            "vejtelen",
-            "bejtelen",
-            "fejtelen"
-        ],
-        [
-            "asztal"
-        ],
-        [
-            "négy",
-            "négye",
-            "négyé",
-            "négy y"
-        ],
-        [
-            "lábú",
-            "tabu",
-            "lapu"
-        ]
+    "OriginalText": "Ez eyg hejtelen mondat.\nAz azstal négyy labu",
+    "Errors": [
+        {
+            "Word": "eyg",
+            "Position": 3,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "egy"
+            ],
+            "SpellCheckerTool": "HunSpell"
+        },
+        {
+            "Word": "hejtelen",
+            "Position": 7,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "helytelen",
+                "heteljen",
+                "tejtelen",
+                "lejtelen",
+                "nejtelen",
+                "hegtelen",
+                "pejtelen",
+                "vejtelen",
+                "bejtelen",
+                "fejtelen"
+            ],
+            "SpellCheckerTool": "HunSpell"
+        },
+        {
+            "Word": "azstal",
+            "Position": 27,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "asztal"
+            ],
+            "SpellCheckerTool": "HunSpell"
+        },
+        {
+            "Word": "négyy",
+            "Position": 34,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "négy",
+                "négye",
+                "négyé",
+                "négy y"
+            ],
+            "SpellCheckerTool": "HunSpell"
+        },
+        {
+            "Word": "labu",
+            "Position": 40,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "lábú",
+                "tabu",
+                "lapu"
+            ],
+            "SpellCheckerTool": "HunSpell"
+        }
     ]
 }

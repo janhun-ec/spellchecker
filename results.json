@@ -1,20 +1,23 @@
 {
-    "Corrected": "Tejtelen mondat",
-    "Incorrect words": [
-        "Hejtelen"
-    ],
-    "Suggestions": [
-        [
-            "Tejtelen",
-            "Lejtelen",
-            "Nejtelen",
-            "Pejtelen",
-            "Vejtelen",
-            "Bejtelen",
-            "Fejtelen",
-            "Helytelen",
-            "Heteljen",
-            "Hegtelen"
-        ]
+    "OriginalText": "Hejtelen mondat",
+    "Errors": [
+        {
+            "Word": "Hejtelen",
+            "Position": 0,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Tejtelen",
+                "Lejtelen",
+                "Nejtelen",
+                "Pejtelen",
+                "Vejtelen",
+                "Bejtelen",
+                "Fejtelen",
+                "Helytelen",
+                "Heteljen",
+                "Hegtelen"
+            ],
+            "SpellCheckerTool": "HunSpell"
+        }
     ]
 }
