@@ -1,7 +1,7 @@
 from spellchecker import SpellChecker
 
-lang = 'hu'
-text = 'Hejtelen mondat'
+lang = 'en'
+text = 'Tihs is a incorect setnence. Secnod one. I is okay.'
 
 # initialize
 sp = SpellChecker(lang)

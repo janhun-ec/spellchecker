@@ -1,20 +1,62 @@
 {
-    "Corrected": "Tejtelen mondat",
+    "Corrected": [
+        "This is an incorrect sentence.",
+        "Second one.",
+        "I am okay."
+    ],
     "Incorrect words": [
-        "Hejtelen"
+        "Tihs",
+        "a",
+        "incorect",
+        "setnence",
+        "Secnod",
+        "is"
     ],
     "Suggestions": [
         [
-            "Tejtelen",
-            "Lejtelen",
-            "Nejtelen",
-            "Pejtelen",
-            "Vejtelen",
-            "Bejtelen",
-            "Fejtelen",
-            "Helytelen",
-            "Heteljen",
-            "Hegtelen"
+            "This",
+            "Ties",
+            "Tips",
+            "IHS",
+            "Tics",
+            "TCHS",
+            "THS",
+            "TIS",
+            "Tins",
+            "Tits"
+        ],
+        [
+            "an"
+        ],
+        [
+            "incorrect"
+        ],
+        [
+            "sentence"
+        ],
+        [
+            "Second",
+            "Sec nod"
+        ],
+        [
+            "am",
+            "will be"
         ]
+    ],
+    "Positions": [
+        0,
+        8,
+        10,
+        19,
+        29,
+        43
+    ],
+    "Error Types": [
+        "misspelling MORFOLOGIK_RULE_EN_US",
+        "misspelling EN_A_VS_AN",
+        "misspelling MORFOLOGIK_RULE_EN_US",
+        "misspelling MORFOLOGIK_RULE_EN_US",
+        "misspelling MORFOLOGIK_RULE_EN_US",
+        "grammar PERS_PRONOUN_AGREEMENT"
     ]
 }
