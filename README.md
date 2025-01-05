@@ -17,9 +17,21 @@ Spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and
 - returns a `dict` in the form:
 ```
 result = {
-    'Corrected': corrected_text,
-    'Incorrect words': incorrect_words,
-    'Suggestions': suggestions,
+    "OriginalText": text,
+    "Errors": [
+        {
+            "Word": incorrect_word,
+            "StartPosition": position,
+            "ErrorType": error_type,
+            "Suggestions": [
+                suggestion1,
+                suggestion2,
+                ...
+            ],
+            "SpellCheckerTool": tool_name
+        },
+        ...
+    ]
 }
 ```
 
