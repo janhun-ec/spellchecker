@@ -41,9 +41,6 @@ class SpellChecker:
             return 'languagetool'
         if self.lang in ['zh']:
             return 'pycorrector'
-        if self.lang in ['ko']:
-            # TODO hanspell?
-            return 'hunspell'
         return 'hunspell'
 
 
@@ -205,9 +202,6 @@ class SpellChecker:
         elif self.tool == 'pycorrector':
             corrected, incorrect_words, suggestions, positions, error_types = \
                 self.__pycorrector_corrector(text)
-        # elif self.tool == 'hanspell':
-        #     corrected, incorrect_words, suggestions, positions, error_types = \
-        #         self.__hanspell_corrector(text)
         elif self.tool == 'hunspell':
             corrected, incorrect_words, suggestions, positions, error_types = \
                 self.__hunspell_corrector(text)
