@@ -1,19 +1,41 @@
 {
-    "OriginalText": "少先队员因该为老人让坐",
+    "OriginalText": "Tihs is a incorect sentence.",
     "Errors": [
         {
-            "Word": "因该",
-            "StartPosition": 4,
-            "ErrorType": "Misspelled",
-            "Suggestions": "应该",
-            "SpellCheckerTool": "pycorrector"
+            "Word": "Tihs",
+            "StartPosition": 0,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "This",
+                "Ties",
+                "Tips",
+                "IHS",
+                "Tics",
+                "TCHS",
+                "THS",
+                "TIS",
+                "Tins",
+                "Tits"
+            ],
+            "SpellCheckerTool": "languagetool"
         },
         {
-            "Word": "坐",
+            "Word": "a",
+            "StartPosition": 8,
+            "ErrorType": "misspelling en a vs an",
+            "Suggestions": [
+                "an"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "incorect",
             "StartPosition": 10,
-            "ErrorType": "Misspelled",
-            "Suggestions": "座",
-            "SpellCheckerTool": "pycorrector"
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "incorrect"
+            ],
+            "SpellCheckerTool": "languagetool"
         }
     ]
 }

@@ -60,7 +60,7 @@ result2 = sp.analyze(file, filemode=True, write_to_file=True, outputfile='result
 print(result2)
 ```
 First print output:
-
+```
 {
     "OriginalText": "Tihs is a incorect sentence.",
     "Errors": [
@@ -93,6 +93,7 @@ First print output:
         },
     ]
 }
+```
 
 ### Language Support
 Supports the following languages:
