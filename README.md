@@ -96,22 +96,22 @@ First print output:
 
 ### Language Support
 Supports the following languages:
-| Language      | Code      |
-| --------      | -----     |
-| Arabic        | (ar)      |
-| Chinese       | (zh)      |
-| Czech         | (cs)      |
-| English       | (en)      |
-| French        | (fr)      |
-| German        | (de)      |
-| Hungarian     | (hu)      |
-| Italian       | (it)      |
-| Korean        | (ko)      |
-| Polish        | (pl)      |
-| Portuguese    | (pt)      |
-| Romanian      | (ro)      |
-| Russian       | (ru)      |
-| Slovakian     | (sk)      |
-| Slovenian     | (sl)      |
-| Spanish       | (es)      |
-| Turkish       | (tr)      |
+| Language      | Code      | Tool          |
+| --------      | -----     | ----          |
+| Arabic        | (ar)      | LanguageTool  |
+| Chinese       | (zh)      | pycorrector   |
+| Czech         | (cs)      | HunSpell      |
+| English       | (en)      | LanguageTool  |
+| French        | (fr)      | LanguageTool  |
+| German        | (de)      | LanguageTool  |
+| Hungarian     | (hu)      | HunSpell      |
+| Italian       | (it)      | LanguageTool  |
+| Korean        | (ko)      | HunSpell      |
+| Polish        | (pl)      | LanguageTool  |
+| Portuguese    | (pt)      | LanguageTool  |
+| Romanian      | (ro)      | HunSpell      |
+| Russian       | (ru)      | LanguageTool  |
+| Slovakian     | (sk)      | HunSpell      |
+| Slovenian     | (sl)      | LanguageTool  |
+| Spanish       | (es)      | HunSpell      |
+| Turkish       | (tr)      | HunSpell      |
