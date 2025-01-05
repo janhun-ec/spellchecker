@@ -1,6 +1,6 @@
 # SpellChecker
 
-HunSpell spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and suggests.
+Spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and suggests. Uses mostly LanguageTool, then HunSpell, pycorrector, hanspell, depending on the language.
 
 ### Install
 - clone the repo
@@ -8,7 +8,7 @@ HunSpell spell checking wrapper, Python module. Checks for mistakes, flags, corr
 - dependencies:
     - `pip install -r ./requirements.txt`
     - or run these:
-        - `pip install hunspell spacy`
+        - `pip install hunspell spacy language_tool_python`
         - `python -m spacy download xx_ent_wiki_sm`  (the spacy multilingual tokenizer package)
 
 ### Main method
@@ -32,8 +32,8 @@ result = {
 ```
 from spellcheker import SpellChecker
 
-lang = 'hu'
-text = 'Hejtelen mondat'
+lang = 'en'
+text = 'Tihs is a incorect sentence.'
 
 # initialize
 sp = SpellChecker(lang)
@@ -50,23 +50,35 @@ print(result2)
 First print output:
 
 {
-    "Corrected": "Tejtelen mondat",\
-    "Incorrect words": [
-        "Hejtelen"
-    ],\
-    "Suggestions": [
-        [
-            "Tejtelen",
-            "Lejtelen",
-            "Nejtelen",
-            "Pejtelen",
-            "Vejtelen",
-            "Bejtelen",
-            "Fejtelen",
-            "Helytelen",
-            "Heteljen",
-            "Hegtelen"
-        ]
+    "OriginalText": "Tihs is a incorect sentence.",
+    "Errors": [
+        {
+            "Word": "Tihs",
+            "StartPosition": 0,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "This",
+                "Ties",
+                "Tips",
+                "IHS",
+                "Tics",
+                "TCHS",
+                "THS",
+                "TIS",
+                "Tins",
+                "Tits"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "a",
+            "StartPosition": 8,
+            "ErrorType": "misspelling en a vs an",
+            "Suggestions": [
+                "an"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
     ]
 }
 

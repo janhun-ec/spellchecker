@@ -1,23 +1,70 @@
 {
-    "OriginalText": "Hejtelen mondat",
+    "OriginalText": "Tihs is a incorect setnence. Secnod one. I is okay.",
     "Errors": [
         {
-            "Word": "Hejtelen",
-            "Position": 0,
-            "ErrorType": "Misspelling",
+            "Word": "Tihs",
+            "StartPosition": 0,
+            "ErrorType": "misspelling morfologik rule en us",
             "Suggestions": [
-                "Tejtelen",
-                "Lejtelen",
-                "Nejtelen",
-                "Pejtelen",
-                "Vejtelen",
-                "Bejtelen",
-                "Fejtelen",
-                "Helytelen",
-                "Heteljen",
-                "Hegtelen"
+                "This",
+                "Ties",
+                "Tips",
+                "IHS",
+                "Tics",
+                "TCHS",
+                "THS",
+                "TIS",
+                "Tins",
+                "Tits"
             ],
-            "SpellCheckerTool": "HunSpell"
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "a",
+            "StartPosition": 8,
+            "ErrorType": "misspelling en a vs an",
+            "Suggestions": [
+                "an"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "incorect",
+            "StartPosition": 10,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "incorrect"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "setnence",
+            "StartPosition": 19,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "sentence"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "Secnod",
+            "StartPosition": 29,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "Second",
+                "Sec nod"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "is",
+            "StartPosition": 43,
+            "ErrorType": "grammar pers pronoun agreement",
+            "Suggestions": [
+                "am",
+                "will be"
+            ],
+            "SpellCheckerTool": "languagetool"
         }
     ]
 }

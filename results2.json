@@ -1,64 +1,153 @@
 {
-    "OriginalText": "Ez eyg hejtelen mondat.\nAz azstal négyy labu",
+    "OriginalText": "Helo whoo is you?\nwhy hvae you frgotten mee?",
     "Errors": [
         {
-            "Word": "eyg",
-            "Position": 3,
-            "ErrorType": "Misspelling",
+            "Word": "Helo",
+            "StartPosition": 0,
+            "ErrorType": "misspelling morfologik rule en us",
             "Suggestions": [
-                "egy"
+                "Held",
+                "Help",
+                "Hello",
+                "Hero",
+                "Hell",
+                "Helm",
+                "Halo",
+                "Helot",
+                "ELO",
+                "HEL",
+                "HEO",
+                "Hilo",
+                "He lo"
             ],
-            "SpellCheckerTool": "HunSpell"
+            "SpellCheckerTool": "languagetool"
         },
         {
-            "Word": "hejtelen",
-            "Position": 7,
-            "ErrorType": "Misspelling",
+            "Word": "whoo",
+            "StartPosition": 5,
+            "ErrorType": "misspelling morfologik rule en us",
             "Suggestions": [
-                "helytelen",
-                "heteljen",
-                "tejtelen",
-                "lejtelen",
-                "nejtelen",
-                "hegtelen",
-                "pejtelen",
-                "vejtelen",
-                "bejtelen",
-                "fejtelen"
+                "whew",
+                "who",
+                "whom",
+                "WHO",
+                "woo",
+                "shoo",
+                "whoa",
+                "whoop",
+                "whop",
+                "whoso",
+                "Thieu"
             ],
-            "SpellCheckerTool": "HunSpell"
+            "SpellCheckerTool": "languagetool"
         },
         {
-            "Word": "azstal",
-            "Position": 27,
-            "ErrorType": "Misspelling",
+            "Word": "why",
+            "StartPosition": 18,
+            "ErrorType": "typographical uppercase sentence start",
             "Suggestions": [
-                "asztal"
+                "Why"
             ],
-            "SpellCheckerTool": "HunSpell"
+            "SpellCheckerTool": "languagetool"
         },
         {
-            "Word": "négyy",
-            "Position": 34,
-            "ErrorType": "Misspelling",
+            "Word": "hvae",
+            "StartPosition": 22,
+            "ErrorType": "misspelling morfologik rule en us",
             "Suggestions": [
-                "négy",
-                "négye",
-                "négyé",
-                "négy y"
+                "have",
+                "HVAC",
+                "HAE",
+                "VAE"
             ],
-            "SpellCheckerTool": "HunSpell"
+            "SpellCheckerTool": "languagetool"
         },
         {
-            "Word": "labu",
-            "Position": 40,
-            "ErrorType": "Misspelling",
+            "Word": "frgotten",
+            "StartPosition": 31,
+            "ErrorType": "misspelling morfologik rule en us",
             "Suggestions": [
-                "lábú",
-                "tabu",
-                "lapu"
+                "forgotten",
+                "fr gotten"
             ],
-            "SpellCheckerTool": "HunSpell"
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "mee",
+            "StartPosition": 40,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "me",
+                "meet",
+                "men",
+                "see",
+                "Lee",
+                "fee",
+                "met",
+                "mere",
+                "bee",
+                "Dee",
+                "Mae",
+                "Mel",
+                "MeV",
+                "Meg",
+                "med",
+                "nee",
+                "tee",
+                "wee",
+                "Mme",
+                "meek",
+                "MCE",
+                "Mex",
+                "gee",
+                "meme",
+                "MPE",
+                "MRE",
+                "mete",
+                "mew",
+                "née",
+                "AEE",
+                "BEE",
+                "CEE",
+                "EE",
+                "EEE",
+                "MAE",
+                "MDE",
+                "ME",
+                "MEA",
+                "MEB",
+                "MEC",
+                "MED",
+                "MEED",
+                "MEF",
+                "MEG",
+                "MEL",
+                "MEN",
+                "MEP",
+                "MER",
+                "MES",
+                "MET",
+                "MIE",
+                "MLE",
+                "MNE",
+                "MOE",
+                "MSE",
+                "MVE",
+                "Me",
+                "Moe",
+                "NEE",
+                "PEE",
+                "TEE",
+                "ZEE",
+                "lee",
+                "meed",
+                "meg",
+                "meh",
+                "mes",
+                "meze",
+                "pee"
+            ],
+            "SpellCheckerTool": "languagetool"
         }
     ]
 }
