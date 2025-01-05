@@ -87,7 +87,7 @@ Supports the following languages:
 | Language      | Code      |
 | --------      | -----     |
 | Arabic        | (ar)      |
-| ~~Chinese~~   | ~~(zh)~~  |
+| Chinese       | (zh)      |
 | Czech         | (cs)      |
 | English       | (en)      |
 | French        | (fr)      |

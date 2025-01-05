@@ -2,9 +2,10 @@
 
 from json import dump
 import sys
+from spacy import load
 from hunspell import HunSpell, HunSpellError
 from language_tool_python import LanguageTool
-from spacy import load
+from pycorrector import Corrector
 
 
 class SpellChecker:
@@ -28,7 +29,7 @@ class SpellChecker:
                 'ru': 'ru-RU',
                 # 'sk': 'sk-SK',    # hunspell is better for this
                 'sl': 'sl-SI',
-                'zh': 'zh-CN',
+                # 'zh': 'zh-CN',    # pycorrector
             }
 
         self.spellchecker = self.__get_corrector()
@@ -39,8 +40,7 @@ class SpellChecker:
         if self.lang in self.languagetool_lang_codes:
             return 'languagetool'
         if self.lang in ['zh']:
-            # TODO get chinese spellchecker. pycorrector
-            return 'languagetool'
+            return 'pycorrector'
         if self.lang in ['ko']:
             # TODO hanspell?
             return 'hunspell'
@@ -57,9 +57,13 @@ class SpellChecker:
                                  f'{self.dicts_path}/{self.lang}.aff')
             except HunSpellError:
                 sys.exit('Dictionaries missing, run ./get_dicts.sh to download them.')
-        elif self.tool == 'languagetool':
+
+        if self.tool == 'languagetool':
             lang_code = self.languagetool_lang_codes[self.lang]
             return LanguageTool(lang_code)
+
+        if self.tool == 'pycorrector':
+            return Corrector()
 
 
     def __get_tokenizer(self):
@@ -164,6 +168,31 @@ class SpellChecker:
         return corrected, incorrect_words, suggestions, positions, error_types
 
 
+    def __pycorrector_corrector(self, text):
+        """corrects and analyses text with pycorrector"""
+        incorrect_words = []
+        suggestions = []
+        positions = []
+        error_types = []
+        corrected = []
+
+        result = self.spellchecker.correct(text)
+        for error in result['errors']:
+            incorrect_word = error[0]
+            corretction = error[1]
+            position = error[2]
+
+            incorrect_words.append(incorrect_word)
+            suggestions.append(corretction)
+            positions.append(position)
+
+            error_types.append('Misspelled')
+
+        corrected.append(result['target'])
+
+        return corrected, incorrect_words, suggestions, positions, error_types
+
+
     def analyze(self, text, filemode=False, write_to_file=False, outputfile='results.json'):
         """Parses the text, builds structured response with errors"""
         if filemode:
@@ -173,6 +202,12 @@ class SpellChecker:
         if self.tool == 'languagetool':
             corrected, incorrect_words, suggestions, positions, error_types = \
                 self.__languagetool_corrector(text)
+        elif self.tool == 'pycorrector':
+            corrected, incorrect_words, suggestions, positions, error_types = \
+                self.__pycorrector_corrector(text)
+        # elif self.tool == 'hanspell':
+        #     corrected, incorrect_words, suggestions, positions, error_types = \
+        #         self.__hanspell_corrector(text)
         elif self.tool == 'hunspell':
             corrected, incorrect_words, suggestions, positions, error_types = \
                 self.__hunspell_corrector(text)
