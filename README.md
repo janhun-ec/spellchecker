@@ -1,6 +1,6 @@
 # SpellChecker
 
-Spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and suggests. Uses mostly LanguageTool, then HunSpell, pycorrector, hanspell, depending on the language.
+Spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and suggests. Uses mostly LanguageTool, then HunSpell, pycorrector, depending on the language.
 
 ### Install
 - clone the repo
