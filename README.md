@@ -8,7 +8,7 @@ Spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and
 - dependencies:
     - `pip install -r ./requirements.txt`
     - or run these:
-        - `pip install hunspell spacy language_tool_python`
+        - `pip install hunspell spacy language_tool_python pycorrector torch kenlm`
         - `python -m spacy download xx_ent_wiki_sm`  (the spacy multilingual tokenizer package)
 
 ### Main method
