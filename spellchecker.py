@@ -97,38 +97,6 @@ class SpellChecker:
         return tokenized
 
 
-    def __correct_chunk(self, chunk, position):
-        """
-        Text is separated by spaces into chunks.
-        Actual hunspell spellchecking and correction.
-        """
-        tokenized = self.__tokenize(chunk)
-        incorrect_words = []
-        suggestions = []
-        corrected = ''
-        positions = []
-
-        curr_position = 0
-        for token in tokenized:
-            if not token.isalpha():     # if not word
-                corrected += token
-            elif self.spellchecker.spell(token):    # word found in dict
-                corrected += token
-            else:   # not found
-                incorrect_words.append(token)
-
-                curr_suggestions = self.spellchecker.suggest(token)
-                suggestions.append(curr_suggestions)
-
-                corrected += curr_suggestions[0] if curr_suggestions else token
-
-                positions.append(position + curr_position)
-
-            curr_position += len(token)
-
-        return corrected, incorrect_words, suggestions, positions
-
-
     def __hunspell_corrector(self, text):
         """corrects text with hunspell spell checker.
         splits text by spaces"""
@@ -137,21 +105,34 @@ class SpellChecker:
         suggestions = []
         positions = []
 
-        position = 0
-        for token in text.split(' '):
-            curr_corrected, curr_incorrect_words, curr_suggestions, curr_positions = \
-                self.__correct_chunk(token, position)
-            corrected += curr_corrected + ' '
-            incorrect_words.extend(curr_incorrect_words)
-            suggestions.extend(curr_suggestions)
-            positions.extend(curr_positions)
-            position += len(token) + 1
+        sent_position = 0
+        for word in text.split(' '):    # splitting by space
+            tokenized = self.__tokenize(word)   # further splitting into tokens (e.g.: i'm -> i 'm)
+
+            word_position = 0
+            for token in tokenized:
+                if not token.isalpha():     # if not word
+                    corrected += token
+                elif self.spellchecker.spell(token):    # word found in dict
+                    corrected += token
+                else:   # not found
+                    incorrect_words.append(token)
+
+                    curr_suggestions = self.spellchecker.suggest(token)
+                    suggestions.append(curr_suggestions)
+
+                    corrected += curr_suggestions[0] if curr_suggestions else token
+
+                    positions.append(sent_position + word_position)
+
+                word_position += len(token)
+
+            corrected += ' '
+            sent_position += len(word) + 1   # plus 1 for the space
 
         corrected = corrected[:-1]  # remove last added space
 
-        # build up the errors
-        count = len(incorrect_words)
-        error_types = ['Misspelling'] * count
+        error_types = ['Misspelling'] * len(incorrect_words)
 
         return corrected, incorrect_words, suggestions, positions, error_types
 
@@ -164,24 +145,21 @@ class SpellChecker:
         error_types = []
         corrected = []
 
-        # split by sentence
-        doc = self.nlp(text)
-        sents = [str(sent) for sent in doc.sents]
-        for sent in sents:
-            matches = self.spellchecker.check(sent)
-            for match in matches:
-                offset = match.offset
-                positions.append(offset + text.find(sent))
+        matches = self.spellchecker.check(text)
+        for match in matches:
+            offset = match.offset
+            positions.append(offset)
 
-                incorrect_word = sent[offset: offset + match.errorLength]
-                incorrect_words.append(incorrect_word)
+            incorrect_word = text[offset: offset + match.errorLength]
+            incorrect_words.append(incorrect_word)
 
-                suggestions.append(match.replacements)
+            suggestions.append(match.replacements)
 
-                # ruleId or ruleIssueType or category or message? or combined?
-                error_types.append(match.ruleIssueType + ' ' + match.ruleId.replace('_', ' ').lower())
+            # ruleId or ruleIssueType or category or message? or combined?
+            error_types.append(match.ruleIssueType + ' ' + match.ruleId.replace('_', ' ').lower())
 
-            corrected.append(self.spellchecker.correct(sent))
+        # if correction needed too
+        # corrected.append(self.spellchecker.correct(text))
 
         return corrected, incorrect_words, suggestions, positions, error_types
 
