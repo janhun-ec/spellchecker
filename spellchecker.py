@@ -40,7 +40,8 @@ class SpellChecker:
         if self.lang in self.languagetool_lang_codes:
             return 'languagetool'
         if self.lang in ['zh']:
-            return 'pycorrector'
+            # return 'pycorrector'
+            return 'languagetool'
         return 'hunspell'
 
 
