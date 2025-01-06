@@ -5,7 +5,7 @@ import sys
 from spacy import load
 from hunspell import HunSpell, HunSpellError
 from language_tool_python import LanguageTool
-from pycorrector import Corrector
+# from pycorrector import Corrector
 
 
 class SpellChecker:
@@ -29,7 +29,7 @@ class SpellChecker:
                 'ru': 'ru-RU',
                 # 'sk': 'sk-SK',    # hunspell is better for this
                 'sl': 'sl-SI',
-                # 'zh': 'zh-CN',    # pycorrector
+                'zh': 'zh-CN',    # pycorrector
             }
 
         self.spellchecker = self.__get_corrector()
@@ -39,9 +39,8 @@ class SpellChecker:
         """decides which spell checking tool to use. Hunspell or Languagetool..."""
         if self.lang in self.languagetool_lang_codes:
             return 'languagetool'
-        if self.lang in ['zh']:
-            # return 'pycorrector'
-            return 'languagetool'
+        # if self.lang in ['zh']:
+        #     return 'pycorrector'
         return 'hunspell'
 
 
@@ -60,8 +59,8 @@ class SpellChecker:
             lang_code = self.languagetool_lang_codes[self.lang]
             return LanguageTool(lang_code)
 
-        if self.tool == 'pycorrector':
-            return Corrector()
+        # if self.tool == 'pycorrector':
+        #     return Corrector()
 
 
     def __get_tokenizer(self):
