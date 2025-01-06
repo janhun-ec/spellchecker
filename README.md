@@ -7,6 +7,7 @@ Spell checking wrapper, Python module. Checks for mistakes, flags, corrects, and
 - run `./get_dicts.sh` to download the dictionaries for hunspell
 - dependencies:
     - `pip install -r ./requirements.txt`
+    - java required on host machine
     - or run these:
         - `pip install hunspell spacy language_tool_python pycorrector torch kenlm`
         - `python -m spacy download xx_ent_wiki_sm`  (the spacy multilingual tokenizer package)
