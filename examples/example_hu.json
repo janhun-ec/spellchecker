@@ -1,0 +1,131 @@
+{
+    "OriginalText": "A téli idoszak minden évben egyett jelent az influenszaszezonnal, és ez idén sincs másként. Magyaroszágon fokozódik a járványhejzet, szinte mindenki talál a környezetében olyan embert, akki lázra vagy köhögésre panaszkodik, de még nem késő beadatni az influenza elleni védőoltást a HVG által megkérdezett szakértők szerint. Mi a különbség tünet és tünet között, és melyik légúti megbetegedés lehet igazán veszéjes? Eről is beszélt Várdi Katalin pulmonológus és Kemenesi Gábor virológus.\n\n",
+    "Errors": [
+        {
+            "Word": "idoszak",
+            "StartPosition": 7,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "időszak"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "egyett",
+            "StartPosition": 28,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "egyet",
+                "egyest",
+                "egyelt",
+                "együtt",
+                "egyet t",
+                "egyezett",
+                "egyeztet",
+                "egyebütt",
+                "egyenget"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "influenszaszezonnal",
+            "StartPosition": 45,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "influenzaszezonnal"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Magyaroszágon",
+            "StartPosition": 92,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Magyarországon",
+                "Magyarosságon",
+                "Magyarország",
+                "Délmagyarországon",
+                "Magyarságon",
+                "Magyarosság"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "járványhejzet",
+            "StartPosition": 118,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "járványhelyzet"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "akki",
+            "StartPosition": 185,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "akik",
+                "ajki",
+                "akli",
+                "akku",
+                "aki",
+                "sakki",
+                "lakki",
+                "makki",
+                "pakki",
+                "akkui",
+                "cakki",
+                "fakki",
+                "akói",
+                "akti",
+                "akai"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "veszéjes",
+            "StartPosition": 405,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "veszélyes",
+                "veszéses"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Eről",
+            "StartPosition": 415,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "E-ről",
+                "Éról",
+                "Erőló",
+                "Erőól",
+                "Erőlé",
+                "Erőél"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Várdi",
+            "StartPosition": 431,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Várdai",
+                "Váradi",
+                "Várdái",
+                "Várda",
+                "Verdi",
+                "Váryi",
+                "Bárdi",
+                "Várd",
+                "Vári",
+                "Vádi",
+                "Várói",
+                "Várai",
+                "Várni"
+            ],
+            "SpellCheckerTool": "hunspell"
+        }
+    ]
+}

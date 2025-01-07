@@ -1,0 +1,278 @@
+{
+    "OriginalText": "Negyveneves lett Sir Lewis Carl Davidson Hamlton, a Formula–1 történetének eggyik, ha nem a legsikeressebb versenyzőlye, aki az egyik legnagyobb „kapuzárási klisét” követve Ferrarira váltott idén. De mennyit tud a lovaggá ütött brit születésnaposról?\n\nA het vilákbajnoki címével Michael Schumaherrel jelenleg holtversenyben rekorder Hamilton 1985. január 7-én született az angilai Stevenage-ben, a McLaren akadémiáját kijárva pedig 2007-ben mutatkozhatot be a száguldó cirkuszban.\n\nRogvest első évben a csúcsra is érhetett volna, de hiába vezetett két futammal a vége előtt 17 ponttal (akkor még csak 10 pont járt egy győzelemért), végül Kimi Räikkönen mögött „csak” másodiként futott be.\n\n",
+    "Errors": [
+        {
+            "Word": "Negyveneves",
+            "StartPosition": 0,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Negyvenéves",
+                "Negyvenebes",
+                "Negyvenelves",
+                "Negyvenleves",
+                "Negyvenneves",
+                "Negyvenheves",
+                "Negyveníves",
+                "Negyvenevás",
+                "Negyveneres",
+                "Negyveneges",
+                "Negyvenedes",
+                "Negyvenöves",
+                "Negyvenexes"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Lewis",
+            "StartPosition": 21,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Lewin",
+                "Levis",
+                "Lexis"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Carl",
+            "StartPosition": 27,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Cal",
+                "Carrara"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Davidson",
+            "StartPosition": 32,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Davidáson",
+                "Davidovicson",
+                "Vidatson",
+                "Vidacson",
+                "Davoson"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Hamlton",
+            "StartPosition": 41,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Halton",
+                "Hamonon"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "eggyik",
+            "StartPosition": 75,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "egyik"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "legsikeressebb",
+            "StartPosition": 92,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "legsikeresebb",
+                "legkevesebbik",
+                "sikeretlenebb"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "versenyzőlye",
+            "StartPosition": 107,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "versenyzője"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "het",
+            "StartPosition": 254,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "hét",
+                "hete",
+                "ehet",
+                "heti",
+                "éhet",
+                "hetű",
+                "hűet",
+                "hót",
+                "hat",
+                "hát",
+                "net",
+                "heh",
+                "heg",
+                "hit",
+                "hőt"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "vilákbajnoki",
+            "StartPosition": 258,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "világbajnoki"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Schumaherrel",
+            "StartPosition": 287,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Schuchbauerrel",
+                "Schullerrel",
+                "Schallmayerrel",
+                "Scheuthauerrel"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Hamilton",
+            "StartPosition": 333,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Hamiúton"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "angilai",
+            "StartPosition": 373,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "angliai",
+                "angolai",
+                "angisai",
+                "anginai",
+                "angélai"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Stevenage",
+            "StartPosition": 381,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Tinédzsere"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "ben",
+            "StartPosition": 391,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "be n",
+                "be",
+                "bent",
+                "eben",
+                "benn",
+                "ében",
+                "benő",
+                "bően",
+                "beun",
+                "bún",
+                "len",
+                "zen",
+                "bán",
+                "bon",
+                "beh"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "McLaren",
+            "StartPosition": 398,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Claaderen"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "mutatkozhatot",
+            "StartPosition": 441,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "mutatkozhatót",
+                "mutatkozhatott",
+                "mutatkozhatok",
+                "mutatkozhatod",
+                "mutatkozhatom"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Rogvest",
+            "StartPosition": 482,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Rögvest"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Kimi",
+            "StartPosition": 638,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Kiai",
+                "Kisi",
+                "Kiái",
+                "Kámi",
+                "Gimi",
+                "Kiim",
+                "Komi",
+                "Kim",
+                "Kii",
+                "Krimi",
+                "Kimig",
+                "Kiméi"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "Räikkönen",
+            "StartPosition": 643,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Körcikken"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "másodiként",
+            "StartPosition": 667,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "sámodiként",
+                "másodikén",
+                "másodikét",
+                "másodként",
+                "másodikként",
+                "másodikért",
+                "másodikéit",
+                "második ént",
+                "második-ént",
+                "másodikén t",
+                "másodmiként",
+                "másodkénit",
+                "másodikont"
+            ],
+            "SpellCheckerTool": "hunspell"
+        }
+    ]
+}

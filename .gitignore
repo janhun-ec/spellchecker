@@ -5,3 +5,6 @@ venv/
 
 # Dictionaries
 dicts/
+
+# example texts
+examples/*.txt

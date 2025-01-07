@@ -3,7 +3,6 @@ import json
 
 lang = 'en'
 text = 'Tihs is a incorect sentence.'
-text_zh = '少先队员因该为老人让坐'
 
 # initialize
 sp = SpellChecker(lang)
@@ -14,7 +13,8 @@ result = sp.analyze(text, write_to_file=True)
 print(json.dumps(result, indent=4, ensure_ascii=False))
 
 # analyze file
-file = 'test.txt'
-result2 = sp.analyze(file, filemode=True, write_to_file=True, outputfile='results2.json')
+name = f'example_{lang}2'
+file = f'examples/{name}.txt'
+result2 = sp.analyze(file, filemode=True, write_to_file=True, outputfile=f'examples/{name}.json')
 print(result2)
 # print(json.dumps(result2, indent=4, ensure_ascii=False))

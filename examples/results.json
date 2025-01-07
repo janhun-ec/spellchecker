@@ -1,0 +1,36 @@
+{
+    "OriginalText": "Tihs is a incorect sentence.",
+    "Errors": [
+        {
+            "Word": "Tihs",
+            "StartPosition": 0,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "Tihis",
+                "Tihi"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "incorect",
+            "StartPosition": 10,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "cincort"
+            ],
+            "SpellCheckerTool": "hunspell"
+        },
+        {
+            "Word": "sentence",
+            "StartPosition": 19,
+            "ErrorType": "Misspelling",
+            "Suggestions": [
+                "ötcentese",
+                "ötvencentese",
+                "egycentese",
+                "tízcentese"
+            ],
+            "SpellCheckerTool": "hunspell"
+        }
+    ]
+}

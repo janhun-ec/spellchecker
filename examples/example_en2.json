@@ -1,0 +1,96 @@
+{
+    "OriginalText": "Dear Mr. Jackson\nI write to you to say how angri I am with the state of the rood outside my house. It’s a really mess. A few\ndays ago my neigbor has got the back wheel of her car stuck in one of the huge holes outside my gate. She\nwas really upset and we will had to get too people from the garage to pull her out.\nWhy have we got these holes in the road? Well, because of the terrible wether we have late with all those\nicee and snow. But that was for to months.\nSo why haven’t you done anything about it? You should send a road repair team around here as son as\npossible. It will also be a god idea if you is better prepared in the future so you could get things done\nmore quick.\nI hope hearing from you very soon about this problem.\n",
+    "Errors": [
+        {
+            "Word": "angri",
+            "StartPosition": 43,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "angry"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "really mess",
+            "StartPosition": 106,
+            "ErrorType": "grammar a rb nn",
+            "Suggestions": [
+                "real mess"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "neigbor",
+            "StartPosition": 137,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "neighbor"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": " and",
+            "StartPosition": 247,
+            "ErrorType": "uncategorized comma compound sentence",
+            "Suggestions": [
+                ", and"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "had",
+            "StartPosition": 260,
+            "ErrorType": "grammar md baseform",
+            "Suggestions": [
+                "have"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "wether",
+            "StartPosition": 386,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "whether",
+                "weather",
+                "ether",
+                "tether",
+                "wetter",
+                "wither",
+                "nether",
+                "wet her",
+                "Werther"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "icee",
+            "StartPosition": 421,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "ice",
+                "IEEE",
+                "iced",
+                "ICSE",
+                "ices",
+                "CEE",
+                "ICE",
+                "ICEs",
+                "ICNE",
+                "ICPE",
+                "Ice"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "is",
+            "StartPosition": 608,
+            "ErrorType": "grammar pers pronoun agreement",
+            "Suggestions": [
+                "are",
+                "were"
+            ],
+            "SpellCheckerTool": "languagetool"
+        }
+    ]
+}

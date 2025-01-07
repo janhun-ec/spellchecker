@@ -1,0 +1,78 @@
+{
+    "OriginalText": "Hello,\nMy name is Susan. I'm forteen and I life in Germany. My hobbys are go to discos, sometimes I hear music in the radio. In the summer I go bathing in a lake. I haven't any brothers or sisters. We take busses to scool. I visit year 9 at my school. My birthday is on Friday. I hope I will become a new guitar.\nI'm looking forward to get a e-mail from you.\n\nYours,\nSusan",
+    "Errors": [
+        {
+            "Word": "forteen",
+            "StartPosition": 29,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "fourteen",
+                "for teen"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "life",
+            "StartPosition": 43,
+            "ErrorType": "misspelling life live",
+            "Suggestions": [
+                "live"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "hobbys",
+            "StartPosition": 63,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "hobbies",
+                "hobby",
+                "Hobbs",
+                "Hobbes"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "busses",
+            "StartPosition": 206,
+            "ErrorType": "style busses",
+            "Suggestions": [
+                "buses"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "scool",
+            "StartPosition": 216,
+            "ErrorType": "misspelling morfologik rule en us",
+            "Suggestions": [
+                "school",
+                "cool",
+                "scoop",
+                "stool",
+                "spool",
+                "scowl",
+                "scoot"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "to get",
+            "StartPosition": 333,
+            "ErrorType": "grammar admit enjoy vb",
+            "Suggestions": [
+                "to getting"
+            ],
+            "SpellCheckerTool": "languagetool"
+        },
+        {
+            "Word": "a",
+            "StartPosition": 340,
+            "ErrorType": "misspelling en a vs an",
+            "Suggestions": [
+                "an"
+            ],
+            "SpellCheckerTool": "languagetool"
+        }
+    ]
+}
